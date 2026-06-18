@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of N Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sum of First N Numbers</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="calculateSum()">Calculate</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateSum() {
+            let n = parseInt(document.getElementById("num").value);
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Sum of first " + n + " numbers = " + sum;
+        }
+    </script>
+
+</body>
+</html>
